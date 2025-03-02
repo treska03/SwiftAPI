@@ -1,3 +1,5 @@
+name: db
+
 services:
   db:
     image: 'postgres:13.1-alpine'
