@@ -5,4 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository
 
 interface CountryRepository : JpaRepository<Country, Long> {
     fun findByName(countryName: String): Country?
+    fun findByCode(code: String): Country?
 }
