@@ -33,6 +33,8 @@ dependencies {
 
     testImplementation("org.mockito:mockito-core:4.0.0")
     testImplementation("org.mockito.kotlin:mockito-kotlin:4.0.0")
+
+    implementation("org.springframework.boot:spring-boot-starter-validation:3.4.3")
 }
 
 kotlin {

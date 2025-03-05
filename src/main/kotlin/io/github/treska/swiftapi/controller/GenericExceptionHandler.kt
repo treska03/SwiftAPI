@@ -1,14 +1,16 @@
 package io.github.treska.swiftapi.controller
 
 import io.github.treska.swiftapi.dto.ErrorResponseDto
+import org.springframework.core.Ordered
+import org.springframework.core.annotation.Order
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
-import org.springframework.web.ErrorResponse
 import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.bind.annotation.ResponseStatus
 import org.springframework.web.bind.annotation.RestControllerAdvice
 
 
+@Order(Ordered.LOWEST_PRECEDENCE)
 @RestControllerAdvice
 class GenericExceptionHandler {
     @ExceptionHandler(Exception::class)

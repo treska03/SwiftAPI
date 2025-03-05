@@ -5,9 +5,12 @@ import io.github.treska.swiftapi.dto.CountrySwiftCodesResponseDto
 import io.github.treska.swiftapi.dto.DefaultResponseDto
 import io.github.treska.swiftapi.dto.SwiftCreateRequestDto
 import io.github.treska.swiftapi.service.SwiftService
+import jakarta.validation.Valid
+import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.*
 
 @RestController
+@Validated
 @RequestMapping("/v1/swift-codes")
 class SwiftController(
     private val swiftService: SwiftService
@@ -23,7 +26,7 @@ class SwiftController(
     }
 
     @PostMapping
-    fun addSwiftCode(@RequestBody swiftCreateDto: SwiftCreateRequestDto): DefaultResponseDto {
+    fun addSwiftCode(@RequestBody @Valid swiftCreateDto: SwiftCreateRequestDto): DefaultResponseDto {
         return swiftService.create(
             address = swiftCreateDto.address,
             bankName = swiftCreateDto.bankName,
