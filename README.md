@@ -8,6 +8,7 @@ A convenient way to access SWIFT codes of banks all around europe!
 
 - [Features](#features)
 - [Installation](#installation)
+- [Documentation](#docs)
 - [Tech Stack](#tech-stack)
 - [Contact](#contact)
 
@@ -29,7 +30,7 @@ A convenient way to access SWIFT codes of banks all around europe!
 - docker
 - git (nice to have)
 
-## Running locally
+### Running locally
 
 To get started using SwiftAPI locally, follow these steps:
 
@@ -47,6 +48,16 @@ When it finishes, your container should be up and running.
 
 The api will be exposed under http://localhost:8080/
 
+---
+
+## Documentation
+
+All endpoint parameters can be found under link: http://localhost:8080/swagger-ui/index.html
+
+<sub>*Note: You need to have SwiftAPI application running in order for it to work*</sub>
+
+---
+
 ## Tech Stack
 
 _Backend_
@@ -60,6 +71,8 @@ _Databases_
 _Tools_
 
 [![PostgreSQL](https://skillicons.dev/icons?i=git)](https://git-scm.com/) [![PostgreSQL](https://skillicons.dev/icons?i=docker)](https://www.docker.com/)
+
+---
 
 ## Contact
 
